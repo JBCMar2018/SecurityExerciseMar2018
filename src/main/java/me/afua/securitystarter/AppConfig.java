@@ -48,6 +48,8 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
                 .withUser("theuser").password(encoder.encode("pa$$word"))
                 .authorities("ADMIN")//This indicates what role the user is logged in with.
                 .and()
+                .withUser("Alton").password(encoder.encode("pa$$")).authorities("ADMIN")
+                .and()
                 .passwordEncoder(encoder);
     }
 }
